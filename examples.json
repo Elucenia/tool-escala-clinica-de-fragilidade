@@ -1,0 +1,59 @@
+[
+  {
+    "label": "Nível 3: não frágil",
+    "input": {
+      "cfs": "3"
+    },
+    "expected": {
+      "score": 3,
+      "level": "low"
+    },
+    "originalInput": {
+      "cfs": "3"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Nível 4: fragilidade muito leve",
+    "input": {
+      "cfs": "4"
+    },
+    "expected": {
+      "score": 4,
+      "level": "mid"
+    },
+    "originalInput": {
+      "cfs": "4"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Nível 6: frágil",
+    "input": {
+      "cfs": "6"
+    },
+    "expected": {
+      "score": 6,
+      "level": "high",
+      "verdict": "Frágil"
+    },
+    "originalInput": {
+      "cfs": "6"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Nível 9: doente terminal",
+    "input": {
+      "cfs": "9"
+    },
+    "expected": {
+      "score": 9,
+      "verdict": "terminal"
+    },
+    "originalInput": {
+      "cfs": "9"
+    },
+    "expandedZeroOptions": []
+  }
+]
