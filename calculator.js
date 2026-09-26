@@ -1,11 +1,11 @@
-/* tool-escala-clinica-de-fragilidade · Elucenia · https://github.com/Elucenia/tool-escala-clinica-de-fragilidade
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-escala-clinica-de-fragilidade · ELUCENIA · https://github.com/Elucenia/tool-escala-clinica-de-fragilidade
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escala-clinica-de-fragilidade","title":"Escala Clínica de Fragilidade (CFS)","fields":[["cfs","Nível que melhor descreve a pessoa (estado habitual, 2 semanas antes da doença aguda)","sel",{"opts":{"1":"1 · Muito em forma: robusto, ativo, faz exercício regular","2":"2 · Em forma: sem doença ativa sintomática, menos em forma que o nível 1","3":"3 · Controlando bem: doenças controladas, sem atividade física regular além de caminhar","4":"4 · Fragilidade muito leve: independente, mas os sintomas limitam atividades; \"mais lento\", cansado","5":"5 · Fragilidade leve: precisa de ajuda em AIVD mais complexas (finanças, transporte, tarefas pesadas)","6":"6 · Fragilidade moderada: ajuda em todas as atividades fora de casa e nas tarefas domésticas; ajuda no banho","7":"7 · Fragilidade grave: totalmente dependente para o cuidado pessoal, mas estável","8":"8 · Fragilidade muito grave: totalmente dependente, aproximando-se do fim da vida","9":"9 · Doente terminal: expectativa de vida &lt; 6 meses, sem outra evidência de fragilidade"}}]],"config":{"unit":"de 9","label":"Escala Clínica de Fragilidade","fields":[["cfs","sel",0]],"bands":[[1,"low","Não frágil (níveis 1 a 3)"],[4,"mid","Vivendo com fragilidade muito leve (nível 4)","Considerar avaliação geriátrica ampla."],[5,"high","Frágil (níveis 5 a 8)","Avaliação geriátrica ampla; discutir objetivos de cuidado antes de procedimentos de alto risco."],[9,"high","Doente terminal (nível 9)","Priorizar cuidados paliativos e objetivos de cuidado."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
