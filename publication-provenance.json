@@ -1,0 +1,39 @@
+{
+  "schema": "elucenia-preassessed-cfs-public-recorder-r7",
+  "id": "escala-clinica-de-fragilidade",
+  "repository": "Elucenia/tool-escala-clinica-de-fragilidade",
+  "remoteBase": {
+    "branch": "main",
+    "commit": "48cebf18be72067228f1e189e12dbc1ae7108d0f",
+    "archiveSha256": "9b533047f38716ac14c63ccbe831c49be13cbbf2508d03eb9447d7784c86a05e"
+  },
+  "previousCandidate": {
+    "manifestSha256": "bc3d403e80dd82f5376d772f94f4f16172e545bf8dbedf654372e670237dc425",
+    "engineSha256": "4d478b18a1e7708e184c6fe58259ee10246b50f8f5ce09156a1404aa84fbd664",
+    "arithmeticBytesUnchanged": true
+  },
+  "changes": [
+    "Replace stale mixed clinical metadata with numeric-recorder-only metadata",
+    "Remove historical automatic dementia-to-grade rule from current public payload",
+    "Clarify public recorder, instrument permission and license scope",
+    "Project historical reference cases onto numeric input/grade output only; keep descriptive fixture names and expectations in immutable private history",
+    "Version the numeric recorder as 0.1.0-preassessed-recorder.20261005 and include ordinal/scope checks in npm test and the existing CI command",
+    "Reject non-scalar select values before conversion, including arrays/custom coercion objects; use neutral recorder band metadata without clinical risk strata"
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "ownerPermission": "not-established",
+  "officialInstrumentEquivalent": false,
+  "publicNumericCases": {
+    "retainedInputs": 4,
+    "priorExpectedNumericValuesPreserved": true,
+    "fullPriorFilesIncluded": false,
+    "priorExamplesSha256": "673764ff18d8eaceabd6e2fad7c35704820d16600b8e4c0bfb23dd5186146e5e",
+    "priorResultsSha256": "95b9df25d4d00dc49b7bb63ccc2abfbec6c133d9ce623418c7d24c1d728e2ac5"
+  },
+  "currentPublicEngine": {
+    "sha256": "0e9b5bc768dbf3cdfd55daa5f599a8f7c349c04801574e1370d093ac2fb6ffab",
+    "numericGradeOutputsPreserved": true,
+    "privateInstrumentByteIdentity": false
+  }
+}

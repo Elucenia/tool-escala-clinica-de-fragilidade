@@ -1,0 +1,83 @@
+{
+  "schema": "elucenia-preassessed-recorder-observations-v1",
+  "id": "escala-clinica-de-fragilidade",
+  "at": "2026-10-05T23:01:07.184Z",
+  "cases": [
+    {
+      "name": "Pre-assessed grade 3",
+      "input": {
+        "cfs": "3"
+      },
+      "obtained": {
+        "id": "escala-clinica-de-fragilidade",
+        "main": [
+          "3",
+          "de 9"
+        ],
+        "label": "Registro de grau CFS previamente avaliado",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      }
+    },
+    {
+      "name": "Pre-assessed grade 4",
+      "input": {
+        "cfs": "4"
+      },
+      "obtained": {
+        "id": "escala-clinica-de-fragilidade",
+        "main": [
+          "4",
+          "de 9"
+        ],
+        "label": "Registro de grau CFS previamente avaliado",
+        "raw": {
+          "score": 4
+        },
+        "clinicalValidation": "not-performed"
+      }
+    },
+    {
+      "name": "Pre-assessed grade 6",
+      "input": {
+        "cfs": "6"
+      },
+      "obtained": {
+        "id": "escala-clinica-de-fragilidade",
+        "main": [
+          "6",
+          "de 9"
+        ],
+        "label": "Registro de grau CFS previamente avaliado",
+        "raw": {
+          "score": 6
+        },
+        "clinicalValidation": "not-performed"
+      }
+    },
+    {
+      "name": "Pre-assessed grade 9",
+      "input": {
+        "cfs": "9"
+      },
+      "obtained": {
+        "id": "escala-clinica-de-fragilidade",
+        "main": [
+          "9",
+          "de 9"
+        ],
+        "label": "Registro de grau CFS previamente avaliado",
+        "raw": {
+          "score": 9
+        },
+        "clinicalValidation": "not-performed"
+      }
+    }
+  ],
+  "scope": "Actual Node observations of four retained synthetic grade inputs; no clinical assignment or instrument validation",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "ownerPermission": "not-established"
+}

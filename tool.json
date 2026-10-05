@@ -1,109 +1,30 @@
 {
+  "schema": "elucenia-preassessed-cfs-recorder-v1",
   "tool": {
     "id": "escala-clinica-de-fragilidade",
-    "title": "Escala Clínica de Fragilidade (CFS)",
-    "short": "Grau de fragilidade da pessoa idosa, de 1 a 9",
-    "desc": "Classifique o grau de fragilidade da pessoa idosa pela Escala Clínica de Fragilidade (Clinical Frailty Scale, versão 2.0), de muito em forma a doente terminal.",
-    "lead": "Classifica a fragilidade de pessoas com 65 anos ou mais em 9 níveis, pelo julgamento clínico da funcionalidade nas 2 semanas anteriores à doença atual.",
-    "spec": [
-      "geriatria",
-      "medicina-intensiva",
-      "medicina-de-emergencia",
-      "clinica-medica",
-      "cirurgia-geral"
-    ],
-    "tier": 1,
+    "title": "Registro de grau CFS previamente avaliado",
     "fields": [
       [
         "cfs",
-        "Nível que melhor descreve a pessoa (estado habitual, 2 semanas antes da doença aguda)",
+        "Grau CFS previamente avaliado (1–9)",
         "sel",
         {
           "opts": {
-            "1": "1 · Muito em forma: robusto, ativo, faz exercício regular",
-            "2": "2 · Em forma: sem doença ativa sintomática, menos em forma que o nível 1",
-            "3": "3 · Controlando bem: doenças controladas, sem atividade física regular além de caminhar",
-            "4": "4 · Fragilidade muito leve: independente, mas os sintomas limitam atividades; \"mais lento\", cansado",
-            "5": "5 · Fragilidade leve: precisa de ajuda em AIVD mais complexas (finanças, transporte, tarefas pesadas)",
-            "6": "6 · Fragilidade moderada: ajuda em todas as atividades fora de casa e nas tarefas domésticas; ajuda no banho",
-            "7": "7 · Fragilidade grave: totalmente dependente para o cuidado pessoal, mas estável",
-            "8": "8 · Fragilidade muito grave: totalmente dependente, aproximando-se do fim da vida",
-            "9": "9 · Doente terminal: expectativa de vida &lt; 6 meses, sem outra evidência de fragilidade"
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9"
           }
         }
       ]
     ],
-    "score": {
-      "label": "Escala Clínica de Fragilidade",
-      "unit": "de 9",
-      "bands": [
-        [
-          1,
-          "low",
-          "Não frágil (níveis 1 a 3)"
-        ],
-        [
-          4,
-          "mid",
-          "Vivendo com fragilidade muito leve (nível 4)",
-          "Considerar avaliação geriátrica ampla."
-        ],
-        [
-          5,
-          "high",
-          "Frágil (níveis 5 a 8)",
-          "Avaliação geriátrica ampla; discutir objetivos de cuidado antes de procedimentos de alto risco."
-        ],
-        [
-          9,
-          "high",
-          "Doente terminal (nível 9)",
-          "Priorizar cuidados paliativos e objetivos de cuidado."
-        ]
-      ]
-    },
-    "formula": "<p>Julgamento clínico em 9 níveis, a partir da história (paciente e cuidador) e do exame: 1 a 3 = não frágil; 4 = fragilidade muito leve; 5 a 8 = fragilidade leve, moderada, grave e muito grave; 9 = doente terminal.</p><p>Na demência, o nível acompanha o grau: leve = 5, moderada = 6, grave = 7.</p>",
-    "table": [
-      [
-        "Nível",
-        "Categoria"
-      ],
-      [
-        "1 a 3",
-        "Não frágil"
-      ],
-      [
-        "4",
-        "Fragilidade muito leve"
-      ],
-      [
-        "5",
-        "Fragilidade leve"
-      ],
-      [
-        "6",
-        "Fragilidade moderada"
-      ],
-      [
-        "7",
-        "Fragilidade grave"
-      ],
-      [
-        "8",
-        "Fragilidade muito grave"
-      ],
-      [
-        "9",
-        "Doente terminal"
-      ]
-    ],
-    "table_note": "Na coorte original (Rockwood 2005), cada nível a mais aumentou significativamente o risco de morte e de institucionalização em 5 anos.",
-    "tips": [
-      "Pontue o estado de base (2 semanas antes da doença aguda), não o paciente acamado no pronto-socorro.",
-      "Validada para ≥ 65 anos: não use em adultos jovens nem em pessoas com deficiência estável (por exemplo, paralisia cerebral).",
-      "A CFS não deve ser usada isoladamente para negar tratamento: ela orienta a conversa sobre objetivos de cuidado.",
-      "Os descritores aqui são resumos; para uso formal, consulte a versão oficial da escala (Dalhousie University), livre para uso clínico e educacional."
-    ],
+    "formula": "Exibe o grau inteiro previamente informado, de 1 a 9. Não soma achados nem atribui um novo grau.",
+    "limits": "Use somente um grau CFS já obtido por avaliação clínica e por um instrumento cujo uso esteja autorizado. Este registro não administra a escala, não avalia fragilidade e não reproduz descritores, imagens ou traduções do instrumento. A permissão de uso e tradução do instrumento é separada e deve ser verificada com seu titular.",
     "sources": [
       [
         "Rockwood K et al. A global clinical measure of fitness and frailty in elderly people. CMAJ, 2005.",
@@ -114,106 +35,47 @@
         "https://doi.org/10.5770/cgj.23.463"
       ]
     ],
-    "cases": [
-      [
-        "Nível 3: não frágil",
-        {
-          "cfs": "3"
-        },
-        {
-          "score": 3,
-          "level": "low"
-        }
-      ],
-      [
-        "Nível 4: fragilidade muito leve",
-        {
-          "cfs": "4"
-        },
-        {
-          "score": 4,
-          "level": "mid"
-        }
-      ],
-      [
-        "Nível 6: frágil",
-        {
-          "cfs": "6"
-        },
-        {
-          "score": 6,
-          "level": "high",
-          "verdict": "Frágil"
-        }
-      ],
-      [
-        "Nível 9: doente terminal",
-        {
-          "cfs": "9"
-        },
-        {
-          "score": 9,
-          "verdict": "terminal"
-        }
-      ]
-    ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 9",
-      "label": "Escala Clínica de Fragilidade",
+    "methodVersion": "ELUCENIA pre-assessed ordinal-grade recorder v1; referenced CFS editions are external and are not reproduced",
+    "implementationHash": "0e9b5bc768dbf3cdfd55daa5f599a8f7c349c04801574e1370d093ac2fb6ffab",
+    "implementationVersion": "escala-clinica-de-fragilidade@preassessed-recorder-2026-10-05+0e9b5bc768db",
+    "reviewStatus": "needs-review",
+    "clinicalValidation": "not-performed",
+    "professionalLanguageReview": "not-performed",
+    "inputContract": {
       "fields": [
-        [
-          "cfs",
-          "sel",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          1,
-          "low",
-          "Não frágil (níveis 1 a 3)"
-        ],
-        [
-          4,
-          "mid",
-          "Vivendo com fragilidade muito leve (nível 4)",
-          "Considerar avaliação geriátrica ampla."
-        ],
-        [
-          5,
-          "high",
-          "Frágil (níveis 5 a 8)",
-          "Avaliação geriátrica ampla; discutir objetivos de cuidado antes de procedimentos de alto risco."
-        ],
-        [
-          9,
-          "high",
-          "Doente terminal (nível 9)",
-          "Priorizar cuidados paliativos e objetivos de cuidado."
-        ]
+        {
+          "key": "cfs",
+          "type": "select",
+          "required": true,
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "meaning": "Previously assessed grade; no feature-to-grade classification"
+        }
       ]
-    },
-    "clinicalReview": "pending",
-    "arithmeticTest": {
-      "status": "passed",
-      "testedAt": "2026-09-25",
-      "total": 4,
-      "passed": 4,
-      "failures": []
-    },
-    "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
     }
   },
   "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+    "clinicalApproval": "not-performed",
+    "professionalLanguageApproval": "not-performed",
+    "ownerPermission": "not-established",
+    "officialInstrumentEquivalent": false,
+    "fullInstrumentImplementation": false
   },
-  "clinicalValidation": "not-performed"
+  "publicScope": "ELUCENIA numeric recording code and translated interface instructions only. No official card, clinical level descriptors, dementia-to-grade rule or translated instrument is bundled.",
+  "instrumentConditionsURL": "https://www.dal.ca/sites/gmr/our-tools/permission-for-use.html",
+  "historicalInstrumentEvidence": {
+    "repositoryCommit": "48cebf18be72067228f1e189e12dbc1ae7108d0f",
+    "readmeSha256": "d859908dad8be60087e06d05642494c31e8a8d95b1c11bf2e5f5d618a4507a5e",
+    "includedInPublicPayload": false,
+    "preservedIn": "Previous Git commit and private audit baseline"
+  }
 }

@@ -1,0 +1,88 @@
+{
+  "id": "escala-clinica-de-fragilidade",
+  "repository": "Elucenia/tool-escala-clinica-de-fragilidade",
+  "branch": "main",
+  "commit": "48cebf18be72067228f1e189e12dbc1ae7108d0f",
+  "archiveSha256": "9b533047f38716ac14c63ccbe831c49be13cbbf2508d03eb9447d7784c86a05e",
+  "protectedFiles": [
+    {
+      "path": ".gitattributes",
+      "type": "blob",
+      "mode": "100644",
+      "size": 19,
+      "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "type": "blob",
+      "mode": "100644",
+      "size": 279,
+      "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "sha256": "bdbefea1fc6b1d8847725c698f62920917bc8d6504bfe8ed622ed2d5aaf7f160"
+    },
+    {
+      "path": ".gitignore",
+      "type": "blob",
+      "mode": "100644",
+      "size": 42,
+      "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "sha256": "763fb702ccbb9bfd8549ca3d0844c731b22aca4e665a2b61d1bb764b64f734d8"
+    },
+    {
+      "path": "AUTHORSHIP.md",
+      "type": "blob",
+      "mode": "100644",
+      "size": 3361,
+      "sha": "cd51835f69815cf4031003d535d5d91bc12918f7",
+      "sha256": "a068d62edb8582a6288e86e7652ad6db7e623363f4f784c5258a4118fe6df92d"
+    },
+    {
+      "path": "CITATION.cff",
+      "type": "blob",
+      "mode": "100644",
+      "size": 964,
+      "sha": "ced8386c059c42e3a36f288192c7ea72d9d3df26",
+      "sha256": "4b0a5fddfbc0b4e0be55877c474a42a3979841dbb473a92dc85766497c4cfa02"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "type": "blob",
+      "mode": "100644",
+      "size": 1480,
+      "sha": "ef7bb4e4c7d2e8795d51aaeab3017864662f839c",
+      "sha256": "881a3340b10cf5b7cdb3b269c0f725a016aaee720921144af3d0ba6aedb21c65"
+    },
+    {
+      "path": "LICENSE",
+      "type": "blob",
+      "mode": "100644",
+      "size": 11358,
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "type": "blob",
+      "mode": "100644",
+      "size": 1676,
+      "sha": "a192f7d1435a5c1650fc7428406c2c9ef4d4b000",
+      "sha256": "bd072593620b17a39108244ea6ccdf187ef93277b83d33673e77cd39f8084101"
+    },
+    {
+      "path": "SECURITY.md",
+      "type": "blob",
+      "mode": "100644",
+      "size": 894,
+      "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "sha256": "3c20d46e436116be0c673f0260b24bbc2193fafbd15fb4659bf0e545b452487e"
+    }
+  ],
+  "receipt": {
+    "file": "reports/review-20261005-completion/native190-protected-remote-baseline-r1.json",
+    "bytes": 6066154,
+    "sha256": "ec8bac70e5a6eed7fb742c319c4e68344eea5713350fa16b9d9bf48e014a9a88"
+  },
+  "remoteCodeExecuted": false,
+  "freshBranchReadRequiredBeforePublication": true
+}

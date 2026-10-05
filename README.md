@@ -1,61 +1,44 @@
-# Escala Clínica de Fragilidade (CFS)
+# Registro de grau CFS previamente avaliado
 
-Identificador: `escala-clinica-de-fragilidade`. Pacote independente da plataforma ELUCENIA, para navegador e Node.js.
+## Documentation in ten languages
 
-## Situação
+- [Português (Brasil)](documentation/pt-BR.md) · [ELUCENIA](https://elucenia.org/pt-br/ferramentas/escala-clinica-de-fragilidade)
+- [English](documentation/en.md) · [ELUCENIA](https://elucenia.org/en/tools/escala-clinica-de-fragilidade)
+- [Español](documentation/es.md) · [ELUCENIA](https://elucenia.org/es/herramientas/escala-clinica-de-fragilidade)
+- [Français](documentation/fr.md) · [ELUCENIA](https://elucenia.org/fr/outils/escala-clinica-de-fragilidade)
+- [Deutsch](documentation/de.md) · [ELUCENIA](https://elucenia.org/de/werkzeuge/escala-clinica-de-fragilidade)
+- [Italiano](documentation/it.md) · [ELUCENIA](https://elucenia.org/it/strumenti/escala-clinica-de-fragilidade)
+- [العربية](documentation/ar.md) · [ELUCENIA](https://elucenia.org/ar/tools/escala-clinica-de-fragilidade)
+- [中文](documentation/zh.md) · [ELUCENIA](https://elucenia.org/zh/tools/escala-clinica-de-fragilidade)
+- [日本語](documentation/ja.md) · [ELUCENIA](https://elucenia.org/ja/tools/escala-clinica-de-fragilidade)
+- [हिन्दी](documentation/hi.md) · [ELUCENIA](https://elucenia.org/hi/tools/escala-clinica-de-fragilidade)
 
-- Revisão: **needs-review**. Revisão documental e clínica independente pendente.
-- Execução: **disponível para reprodução técnica da fórmula**.
-- Validação clínica independente: **não realizada**. Os testes abaixo verificam aritmética e transporte dos campos.
-- 4 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **realizada em 2026-09-25**, 40 comparações conformes.
-- Dados: o exemplo funciona localmente, sem rede, armazenamento ou identificação de pacientes.
+The README introduction is in English; the linked usage, field, method, limits, source and review documentation is available in each listed language. Bibliographic titles and schema identifiers retain their source identity.
 
-## Uso no Node.js
+## Current scope
 
-```js
-const { calculate } = require('./calculator.js');
-const example = require('./examples.json')[0];
-console.log(calculate(example.input));
+This independent package records a CFS grade already assigned in a separate clinical assessment. It accepts integer grade codes 1–9 and returns the same grade. It does not administer the scale or classify clinical findings, dementia or prognosis. No instrument descriptors, card images or translations are bundled.
+
+Authorization from the instrument's owner is **not established**. Publishing this numeric recorder does not assert authorization, official instrument equivalence, clinical validation or professional translation approval. See [SOURCE-RIGHTS-REVIEW.md](SOURCE-RIGHTS-REVIEW.md) and [the developer's conditions](https://www.dal.ca/sites/gmr/our-tools/permission-for-use.html).
+
+## Installation and use
+
+No npm dependencies are required. Use Node.js 22 or later:
+
+```sh
+node test.cjs
+node test-recorder-scope.cjs
 ```
 
-Execute `node test.cjs` (ou `npm test`) para conferir os exemplos. Abra `index.html` para usar a versão local do navegador. Não há dependências npm.
+```js
+const {calculate} = require('./calculator.js');
+console.log(calculate({cfs:'9'}));
+```
 
-## Contrato
+Serve this directory using a local HTTP server and open index.html for the browser interface. The selected grade is never assigned automatically. Inputs and outputs remain local; this package makes no provider requests and stores no patient data.
 
-`calculate(input)` recebe um objeto, devolve `{id, main, label, raw, clinicalValidation}` ou `{error, code, field?}`. Consulte `tool.json` e `metadata.fields` para nomes, unidades, opções e intervalos. Números aceitam valores finitos ou strings numéricas; opções precisam corresponder às chaves documentadas. Campos obrigatórios vazios, booleanos inválidos, valores fora de intervalo e resultados não finitos são rejeitados. Somente checkbox omitido representa falso; um campo numérico ou uma opção obrigatória nunca é preenchido automaticamente.
+## Licenses and provenance
 
-Interpretações, ordens terapêuticas e tabelas herdadas não são retornadas pelo adaptador. Classificações e valores ainda dependem da população e das limitações da fonte.
+Preserve [LICENSE](LICENSE), [NOTICE](NOTICE), [METHOD-CODE-LICENSE.txt](METHOD-CODE-LICENSE.txt) and [METHOD-CODE-NOTICE.md](METHOD-CODE-NOTICE.md). Apache-2.0 covers the original standalone wrapper/support code; the retained method-code component has its own MIT notice. Neither license grants rights in the instrument itself.
 
-## Fórmula / versão
-
-Julgamento clínico em 9 níveis, a partir da história (paciente e cuidador) e do exame: 1 a 3 = não frágil; 4 = fragilidade muito leve; 5 a 8 = fragilidade leve, moderada, grave e muito grave; 9 = doente terminal.Na demência, o nível acompanha o grau: leve = 5, moderada = 6, grave = 7.
-
-A transcrição acima documenta o acervo de origem e pode requerer atualização. 
-
-## Condições e limites
-
-Classifica a fragilidade de pessoas com 65 anos ou mais em 9 níveis, pelo julgamento clínico da funcionalidade nas 2 semanas anteriores à doença atual.
-
-Confirme população, exclusões, unidades, versão e diretriz aplicável ao país e serviço. O resultado não deve ser utilizado isoladamente para diagnóstico, alta ou prescrição. O pacote não representa certificação clínica, aprovação regulatória ou indicação para toda população. Veja a revisão completa em `tool.json`.
-
-## Fontes originais
-
-- [Rockwood K et al. A global clinical measure of fitness and frailty in elderly people. CMAJ, 2005.](https://doi.org/10.1503/cmaj.050051)
-- [Rockwood K, Theou O. Using the Clinical Frailty Scale in allocating scarce health care resources. Can Geriatr J, 2020.](https://doi.org/10.5770/cgj.23.463)
-
-## Exemplos e rastreabilidade
-
-`examples.json` preserva `originalInput`, expectativa e entrada explícita do exemplo. Não foi necessário expandir opções zero nos exemplos.
-
-## O que esta ferramenta não faz
-
-- Não diagnostica, não prescreve e não substitui a avaliação de um médico. O resultado é a reprodução técnica de uma fórmula ou escore publicado.
-- Não envia dados a lugar nenhum: roda no navegador ou no Node.js, sem rede, sem telemetria, sem armazenamento.
-- Não guarda nem identifica pacientes. Não use com dados identificáveis fora de um ambiente que você controla.
-- Não tem validação clínica independente nem aprovação regulatória (ver "Situação").
-
-## Autoria e licença
-
-Criado e mantido por **Felipe Guedes** (Engenheiro de Software e Arquiteto de Sistemas, Toledo, Paraná, Brasil) para a **ELUCENIA**, uma cadeia médica e científica global para acelerar a descoberta. Criado em 2026-09-25 na organização [github.com/Elucenia](https://github.com/Elucenia).
-
-Licença **Apache-2.0** (arquivo `LICENSE`): você pode usar, copiar, modificar e embutir este código no seu site ou sistema, inclusive comercial, desde que mantenha o arquivo `NOTICE` e o aviso de copyright e declare as modificações. A licença cobre o código deste pacote; instrumentos, questionários, tabelas, traduções e marcas citados nas fontes mantêm os direitos dos seus titulares (ver `NOTICE`). Detalhes em `AUTHORSHIP.md`, `CITATION.cff`, `SECURITY.md` e `CONTRIBUTING.md`. Contato: contato@elucenia.org.
+The previous README remains available in Git history; it is not copied into this revision. Its obsolete dementia mapping has been removed from current publication metadata. See tool.json for the exact scope and publication-provenance.json for byte bindings.

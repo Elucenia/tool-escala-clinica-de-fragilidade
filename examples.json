@@ -1,59 +1,118 @@
 [
   {
-    "label": "Nível 3: não frágil",
+    "id": "escala-clinica-de-fragilidade",
+    "kind": "preassessed-numeric-recorder",
+    "index": 0,
+    "name": "Pre-assessed grade 3",
     "input": {
       "cfs": "3"
     },
     "expected": {
-      "score": 3,
-      "level": "low"
+      "score": 3
     },
-    "originalInput": {
-      "cfs": "3"
+    "recordedResult": {
+      "main": [
+        "3",
+        "de 9"
+      ],
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "scope": "Numeric input/output transport only. Historical descriptive names and interpretative expectations are excluded from this public projection.",
+      "historicalBank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      }
+    }
   },
   {
-    "label": "Nível 4: fragilidade muito leve",
+    "id": "escala-clinica-de-fragilidade",
+    "kind": "preassessed-numeric-recorder",
+    "index": 1,
+    "name": "Pre-assessed grade 4",
     "input": {
       "cfs": "4"
     },
     "expected": {
-      "score": 4,
-      "level": "mid"
+      "score": 4
     },
-    "originalInput": {
-      "cfs": "4"
+    "recordedResult": {
+      "main": [
+        "4",
+        "de 9"
+      ],
+      "raw": {
+        "score": 4
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "scope": "Numeric input/output transport only. Historical descriptive names and interpretative expectations are excluded from this public projection.",
+      "historicalBank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      }
+    }
   },
   {
-    "label": "Nível 6: frágil",
+    "id": "escala-clinica-de-fragilidade",
+    "kind": "preassessed-numeric-recorder",
+    "index": 2,
+    "name": "Pre-assessed grade 6",
     "input": {
       "cfs": "6"
     },
     "expected": {
-      "score": 6,
-      "level": "high",
-      "verdict": "Frágil"
+      "score": 6
     },
-    "originalInput": {
-      "cfs": "6"
+    "recordedResult": {
+      "main": [
+        "6",
+        "de 9"
+      ],
+      "raw": {
+        "score": 6
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "scope": "Numeric input/output transport only. Historical descriptive names and interpretative expectations are excluded from this public projection.",
+      "historicalBank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      }
+    }
   },
   {
-    "label": "Nível 9: doente terminal",
+    "id": "escala-clinica-de-fragilidade",
+    "kind": "preassessed-numeric-recorder",
+    "index": 3,
+    "name": "Pre-assessed grade 9",
     "input": {
       "cfs": "9"
     },
     "expected": {
-      "score": 9,
-      "verdict": "terminal"
+      "score": 9
     },
-    "originalInput": {
-      "cfs": "9"
+    "recordedResult": {
+      "main": [
+        "9",
+        "de 9"
+      ],
+      "raw": {
+        "score": 9
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "scope": "Numeric input/output transport only. Historical descriptive names and interpretative expectations are excluded from this public projection.",
+      "historicalBank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      }
+    }
   }
 ]
