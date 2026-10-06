@@ -1,5 +1,6 @@
 {
-  "schema": "elucenia-public-source-files-r8",
+  "id": "escala-clinica-de-fragilidade",
+  "scope": "Exact public preassessed numeric recorder; ordinal unit clarification only.",
   "files": [
     {
       "path": ".gitattributes",
@@ -128,8 +129,8 @@
     },
     {
       "path": "localization.js",
-      "bytes": 38023,
-      "sha256": "e9f10028b7260d3aec336321eb0c66095e3074faa75b79798d8c12ddc1970477"
+      "bytes": 38024,
+      "sha256": "2009ab32e108c9e64e80c14ff7d3e86427d038f82a69beaf7ab977100727f23b"
     },
     {
       "path": "METHOD-CODE-LICENSE.txt",
@@ -149,7 +150,7 @@
     {
       "path": "package.json",
       "bytes": 449,
-      "sha256": "af1442350211d3e7ba7a05208c809f6e2248ac1e2c46133598974fcd340da888"
+      "sha256": "64939a445b5b4e536a467853e9dab1127fc31c5cdeedd75eb7d3077dca46c2b4"
     },
     {
       "path": "portal-formatters.browser.js",

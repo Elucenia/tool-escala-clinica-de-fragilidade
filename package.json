@@ -1,6 +1,6 @@
 {
   "name": "@elucenia/tool-escala-clinica-de-fragilidade",
-  "version": "0.1.1-preassessed-recorder.20261005",
+  "version": "0.1.2-preassessed-recorder.20261005",
   "private": true,
   "type": "commonjs",
   "main": "calculator.js",
